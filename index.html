@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杜鹏程 · Agent 应用开发工程师（2027 届）</title>
+<meta name="description" content="杜鹏程个人求职主页：气象智能体平台 Trit-AI 开发实习生（7 个 PR 合入主线），毕设 LangGraph + RAG 督学系统（评测通过率 96.7%），开源仓库与简历下载。">
+<meta property="og:title" content="杜鹏程 · Agent 应用开发工程师（2027 届）">
+<meta property="og:description" content="真实生产智能体平台实习 · LangGraph/RAG/评测体系 · 开源项目与简历下载">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <p class="hero-name">杜鹏程</p>
+    <p class="hero-title">Agent 应用开发工程师 · 2027 届校招</p>
+    <p class="hero-tag">在真实生产智能体平台交付过 7 个合入 PR 的开发实习生；独立完成带评测体系的 LangGraph + RAG 督学系统（毕业设计，已开源）。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="assets/resume.pdf" download="杜鹏程-Agent应用开发工程师-简历.pdf">下载简历 PDF</a>
+      <a class="btn btn-ghost" href="https://github.com/xuanlin199/learning-planner-agent" target="_blank" rel="noopener">毕设源码（GitHub）</a>
+    </div>
+    <ul class="hero-contact">
+      <li>电话 19982513294</li>
+      <li>邮箱 3201509857@qq.com</li>
+      <li>微信 a3201509857</li>
+      <li><a href="https://github.com/xuanlin199" target="_blank" rel="noopener">github.com/xuanlin199</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><span class="stat-num">7</span><span class="stat-label">PR 合入生产主线<br>（智能体平台实习）</span></div>
+    <div class="stat"><span class="stat-num">100+</span><span class="stat-label">新增回归测试用例<br>（每修复必有回归）</span></div>
+    <div class="stat"><span class="stat-num">96.7%</span><span class="stat-label">计划质量评测通过率<br>（30 目标 × 7 指标）</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">RAG 命中 / 引用 / 拒答<br>（25 题评测）</span></div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section id="intern" class="section">
+    <h2>实习经历 <small>Internship</small></h2>
+    <div class="entry-head">
+      <div>
+        <h3>气象局人工智能气象应用研究中心</h3>
+        <p class="role">Trit-AI 气象智能体平台 · 开发实习生</p>
+      </div>
+      <span class="date">2026.09 – 至今</span>
+    </div>
+    <p class="lead">参与中心自研气象智能体平台 Trit-AI（FastAPI + React + 多 LLM 判断链 + 技能 / 部门知识库体系）研发，负责部门知识库与对话链路模块。</p>
+    <ul class="bullets">
+      <li><b>判断层 LLM 链加固</b>：直连本地 Qwen 模型探针实测，定位思维链挤占 token、解析「回声陷阱」等 4 类根因并逐一修复，意图路由准确率 <mark>0/6 → 6/6</mark>、延迟 1.6~2.6s → 1.1s，36 项回归锁死退化。</li>
+      <li><b>部门知识库自助接入</b>：修复检索 5 条根因链（工具绕行 / 打分虚高 / 路由错派 / 命名错位等），金牌问句思考耗时 <mark>70.7s → 5.0s</mark>；实现「一表单自助接入 + Webhook 秒级同步 + 每日兜底 + 失败飞书告警」全生命周期（PR #23 / #28）。</li>
+      <li><b>安全与健壮性加固</b>：按两轮评审将接入凭据改为环境变量注入、登记文件原子写 + 线程锁；实现五步下线流程与 ensure_fresh 新鲜度保障，消除「改动后仍答旧内容」的 1 小时陈旧窗口（PR #32 / #34）。</li>
+      <li><b>会话体验修复</b>：历史会话整屏空白拆出 3 个独立根因逐一击破；前端 O(N²) 回灌改批量灌入 + React.memo，后端同步 I/O 迁移 asyncio.to_thread（PR #33）。</li>
+      <li><b>独立复核</b>：两轮真实 SSE 实测推翻「延迟优化默认已生效」结论，输出 6 项遗留清单；交付全程 Gitea 分支 + PR + 评审，配部署清单与回滚预案。</li>
+    </ul>
+  </section>
+
+  <section id="project1" class="section">
+    <h2>毕业设计项目 <small>Project</small></h2>
+    <div class="entry-head">
+      <div>
+        <h3>个性化学习计划生成与督学系统</h3>
+        <p class="role">独立开发 · 已开源：<a href="https://github.com/xuanlin199/learning-planner-agent" target="_blank" rel="noopener">learning-planner-agent</a></p>
+      </div>
+      <span class="date">2026.09 – 至今</span>
+    </div>
+    <p class="lead">一句话学习目标 → 智能体拆解生成 7 天结构化周计划 → 每日打卡反馈 → 按执行情况动态调整下周计划，形成「生成—执行—反馈—调整」闭环。</p>
+    <div class="chips">
+      <span>LangGraph</span><span>FastAPI</span><span>Pydantic v2</span><span>Vue3 + TS</span><span>Chroma + bge</span><span>Docker</span><span>pytest ×58</span>
+    </div>
+    <ul class="bullets">
+      <li>LangGraph 状态机编排计划生成与动态调整两条工作流，生成链含校验失败自动重试；调整节点<b>自实现 ReAct 工具调用循环</b>（tool_calls 解析 → 执行 → 结果回填），不依赖框架黑盒。</li>
+      <li>Function Calling 工具层：智能体自主调用目标 / 周统计 / 待办 / 反馈 4 类工具；Pydantic v2 校验时段格式、同日重叠、单日上限、截止合规，Schema <b>100% 拦截非法输出</b>。</li>
+      <li>RAG 知识库问答：bge 嵌入 + Chroma 向量库，回答带引用角标与相似度；检索阈值 + 拒答话术防幻觉，嵌入模型不可用自动降级。</li>
+      <li>LLM 调用观测埋点（token / 延迟 / 成本）、JWT + PBKDF2 认证、Docker 多阶段构建一键部署。</li>
+    </ul>
+    <div class="eval-grid">
+      <div class="eval">
+        <h4>计划质量评测（30 目标 × 7 指标）</h4>
+        <table>
+          <tr><td>综合通过率</td><td><b>96.7%</b>（29/30）</td></tr>
+          <tr><td>结构合规（Schema）</td><td><b>100%</b>（30/30）</td></tr>
+          <tr><td>修复长周期日期缺陷后</td><td><b>30/30 通过</b></td></tr>
+          <tr><td>生成延迟（修复后）</td><td>6068ms → <b>3764ms</b></td></tr>
+        </table>
+      </div>
+      <div class="eval">
+        <h4>RAG 问答评测（25 题）</h4>
+        <table>
+          <tr><td>文档内命中率（15 题）</td><td><b>100%</b></td></tr>
+          <tr><td>引用来源附带率</td><td><b>100%</b></td></tr>
+          <tr><td>文档外拒答率（防幻觉，10 题）</td><td><b>100%</b></td></tr>
+          <tr><td>问答延迟</td><td>avg 610ms</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="shot-placeholder">系统截图位（目标详情页 / 计划看板 · 后续补充）</div>
+  </section>
+
+  <section id="project2" class="section">
+    <h2>项目经历 <small>Project</small></h2>
+    <div class="entry-head">
+      <div>
+        <h3>智能故障预测与自愈平台</h3>
+        <p class="role">全栈 · 多模态深度学习</p>
+      </div>
+      <span class="date">2026.05 – 2026.08</span>
+    </div>
+    <p class="lead">面向企业 IT 运维场景：实时采集服务器指标与日志，多模态模型融合预测故障风险，LLM 驱动自愈决策。</p>
+    <div class="chips">
+      <span>PyTorch</span><span>Transformer / BiLSTM</span><span>Kafka</span><span>FastAPI</span><span>InfluxDB / ES / PostgreSQL</span><span>通义千问 API</span><span>Vue3 + ECharts</span><span>Docker Compose</span>
+    </div>
+    <ul class="bullets">
+      <li>Transformer 时序编码器处理 30 点 CPU / 内存指标序列，BiLSTM 编码日志文本，跨模态注意力与因果门控动态融合；自建测试集 <b>F1 0.98</b>。</li>
+      <li>自建数据与实验管线：指标 / 日志模拟数据生成、数据增强与困难样本生成脚本，模型对比与压测脚本一键复跑、结果落盘可查。</li>
+      <li>实时推理：InfluxDB Flux 查询近 5 分钟指标 + Elasticsearch 检索错误日志，在线输出低 / 中 / 高三档风险等级。</li>
+      <li>LLM 自愈：通义千问按实时指标与错误日志生成根因分析与修复脚本并自动执行，支持人工否决，全程 PostgreSQL 审计留痕。</li>
+      <li>Docker Compose 编排 Kafka / ZooKeeper / InfluxDB / Elasticsearch / PostgreSQL / Kafka-UI 六个基础服务。</li>
+    </ul>
+    <div class="eval-grid">
+      <div class="eval eval-wide">
+        <h4>模型对比实验（自建测试集，F1）</h4>
+        <table>
+          <tr><td>纯指标基线</td><td>0.69</td></tr>
+          <tr><td>纯日志</td><td>0.97</td></tr>
+          <tr><td>简单拼接融合</td><td>0.84</td></tr>
+          <tr><td>去掉因果门控（消融）</td><td>0.94</td></tr>
+          <tr class="highlight-row"><td>多模态因果门控融合（本系统）</td><td><b>0.98</b></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="shot-placeholder">监控大屏截图位（指标曲线 / 自愈历史 · 后续补充）</div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>专业技能 <small>Skills</small></h2>
+    <div class="skill-group">
+      <h3>Agent 开发</h3>
+      <p>LangGraph 工作流编排 · ReAct / Function Calling（项目中有脱离框架的自实现版本）· 提示词工程（结构化输出与解析加固）· 了解 LangChain / MCP 生态</p>
+    </div>
+    <div class="skill-group">
+      <h3>RAG 全链路</h3>
+      <p>bge 嵌入 · Chroma 向量库 · 检索阈值 / 引用标注 / 拒答防幻觉 · 评测集构建与自动化指标</p>
+    </div>
+    <div class="skill-group">
+      <h3>后端与工程化</h3>
+      <p>Python · FastAPI · Pydantic v2 · SQLAlchemy · JWT 认证 · pytest · MySQL / SQLite · Docker 多阶段构建 · 分支 + PR 评审协作</p>
+    </div>
+    <div class="skill-group">
+      <h3>前端与大模型接入</h3>
+      <p>Vue3 + TypeScript + Element Plus（独立完成系统前端）· 了解 React（实习中参与性能优化）· OpenAI 兼容 API（DeepSeek / GLM / 通义）· llama.cpp + Qwen 本地推理实测</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p><b>教育背景</b>　宜宾学院 · 软件工程（本科）· 2023.09 – 2027.06（预计）</p>
+    <p class="footer-contact">电话 19982513294 ｜ 邮箱 <a href="mailto:3201509857@qq.com">3201509857@qq.com</a> ｜ 微信 a3201509857 ｜ <a href="https://github.com/xuanlin199" target="_blank" rel="noopener">GitHub</a></p>
+    <p class="footer-note">本页所有数据来自项目实测记录与工作总结，可在面试中逐条对证。© 2026 杜鹏程</p>
+  </div>
+</footer>
+
+</body>
+</html>
